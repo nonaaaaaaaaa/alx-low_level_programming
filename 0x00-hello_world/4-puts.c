@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
-* Main - "Prints Programming is like building a multilingual puzzle
-*  followed by a new line"
+* main - "main is entry point"
 * Description - "A c  program how to use puts function"
 * Return - "always 0(success)"
 */
