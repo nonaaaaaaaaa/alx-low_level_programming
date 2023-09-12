@@ -13,6 +13,6 @@ void times_table(void)
 	{
 		l = a * b;
 	}
-	_putchar(l + '0');
+	_putchar(l + 48);
 	_putchar('\n');
 }
