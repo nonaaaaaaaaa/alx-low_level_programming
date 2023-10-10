@@ -2,12 +2,11 @@
 #define _DOG_H
 
 /**
- * File: dog.h
- * struct dog - struct new type
+ * struct dog - adog struct
  * @age: age dog
  * @owner : dog owner
  * @name: dog name
- * Desc: header file
+ * Descsription: dog struct witn name, age and owner
  *
  */
 
@@ -17,3 +16,6 @@ struct dog
 	float age;
 	char *owner;
 };
+
+
+#endif
