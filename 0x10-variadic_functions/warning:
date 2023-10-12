@@ -1,0 +1,13 @@
+%S", sep, ptr);
+      |           ~^     ~~~
+      |            |     |
+      |            int * char *
+      |           %s
+2-print_strings.c:31:14: warning: format ‘%S’ expects argument of type ‘wchar_t *’, but argument 3 has type ‘char *’ [-Wformat=]
+   31 |   printf("%S%S", sep, ptr);
+      |             ~^        ~~~
+      |              |        |
+      |              int *    char *
+      |             %s
+/usr/bin/ld: /usr/lib/gcc/
+ioid array_iterator(int *array, size_t size, void (*action)(int));int int_index(int *array, int size, int (*cmp)(int));
