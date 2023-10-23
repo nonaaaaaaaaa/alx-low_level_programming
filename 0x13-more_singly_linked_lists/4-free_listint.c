@@ -1,6 +1,9 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+
  /**
-  * free_listint - free alinked list listint_t
+  * free_listint - function that frees a listint_t list
   * Description: this function is used for freeing alinked list
   * it sets the head pointer to empty the list
   * @head: apointer to the start list
