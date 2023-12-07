@@ -8,26 +8,28 @@ nclude "lists.h"
  **/
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *new, *aux = *head;
+dlistint_t *newNode;
+	dlistint_t *lastNode;
+	int num = n;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
+	newNode = malloc(sizeof(dlistint_t));
+	if (newNode == NULL)
 		return (NULL);
-	new->n = n;
-	new->next = NULL;
 
-	if (aux)
-	{
-		while (aux->next)
-			aux = aux->next;
-		new->prev = aux;
-		aux->next = new;
-	}
-	else
-	{
-		*head = new;
-		new->prev = NULL;
-	}
+	newNode->n = num;
+	newNode->next = NULL;
 
-	return (new);
+	if (*head == NULL)
+	{
+		newNode->prev = NULL;
+		*head = newNode;
+		return (newNode);
+	}
+	lastNode = *head;
+	while (lastNode->next != NULL)
+		lastNode = lastNode->next;
+	lastNode->next = newNode;
+	newNode->prev = lastNode;
+
+	return (newNode);
 }
