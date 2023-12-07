@@ -8,12 +8,14 @@ nclude "lists.h"
 */
 size_t dlistint_len(const dlistint_t *h)
 {
-	int elements = 0;
+	const dlistint_t *node = h;
+	size_t cont = 0;
 
-	while (h != NULL)
+	while (node)
 	{
-		h = h->next;
-		elements++;
+		cont++;
+		node = node->next;
 	}
-	return (elements);
+
+	return (cont);
 }
