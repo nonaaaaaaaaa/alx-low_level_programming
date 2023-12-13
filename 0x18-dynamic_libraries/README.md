@@ -1,1 +1,2 @@
 static and dynamic lib
+
